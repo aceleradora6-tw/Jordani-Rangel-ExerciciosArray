@@ -47,6 +47,14 @@ public class Main {
         return listaC;
     }
 
-    
+    public ArrayList<Integer> interseccaoArrays (ArrayList<Integer> listaA, ArrayList<Integer> listaB){
+        ArrayList<Integer> listaC = new ArrayList<Integer>();
+        for (int i = 0; i < listaA.size(); i++){
+            if (listaB.contains(listaA.get(i))){
+                listaC.add(listaA.get(i));
+            }
+        }
+        return listaC;
+    }
 
 }
