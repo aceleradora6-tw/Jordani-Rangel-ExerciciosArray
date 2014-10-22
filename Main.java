@@ -17,7 +17,7 @@ public class Main {
         listaInteiros1.add(13);
         listaInteiros1.add(10);
         listaInteiros1.add(10);
-        System.out.println(listaInteiros1);
+        System.out.println("Lista 1: " + listaInteiros1);
         soma(listaInteiros1);
 
         ArrayList<Integer> listaInteiros2 = new ArrayList<Integer>();
@@ -26,7 +26,7 @@ public class Main {
         listaInteiros2.add(10);
         listaInteiros2.add(5);
         listaInteiros2.add(10);
-        System.out.println(listaInteiros2);
+        System.out.println("Lista 2: " + listaInteiros2);
 
         System.out.println(intArrayToBooleanArray(listaInteiros1, listaInteiros2));
 
@@ -34,6 +34,8 @@ public class Main {
 
         System.out.println(uniaoArrays(listaInteiros1, listaInteiros2));
 
+        System.out.println("Troca Maior/Menor lista 1: " + trocaMaiorMenor(listaInteiros1));
+        System.out.println("Troca Maior/Menor lista 2: " + trocaMaiorMenor(listaInteiros2));
     }
 
     public static void adicionarPessoas(){
@@ -93,6 +95,28 @@ public class Main {
             }
         }
         return listaC;
+    }
+
+    public static ArrayList<Integer> trocaMaiorMenor (ArrayList<Integer> listaA){
+        if (listaA.size() > 0){
+            int maior = listaA.get(0);
+            int menor = listaA.get(0);
+            int indiceMaior = 0;
+            int indiceMenor = 0;
+                for (int i = 1; i < listaA.size(); i++){
+                    if (maior < listaA.get(i)){
+                        maior = listaA.get(i);
+                        indiceMaior = i;
+                    }
+                    if (menor > listaA.get(i)){
+                        menor = listaA.get(i);
+                        indiceMenor = i;
+                    }
+                }
+            listaA.set(indiceMenor, maior);
+            listaA.set(indiceMaior, menor);
+        }
+        return listaA;
     }
 
 }
