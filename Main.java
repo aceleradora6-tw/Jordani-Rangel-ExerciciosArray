@@ -16,7 +16,7 @@ public class Main {
         listaInteiros1.add(3);
         listaInteiros1.add(13);
         listaInteiros1.add(10);
-        listaInteiros1.add(10);
+        listaInteiros1.add(1);
         System.out.println("Lista 1: " + listaInteiros1);
         soma(listaInteiros1);
 
@@ -41,6 +41,8 @@ public class Main {
         System.out.println("ImparesEsquerdaParesDireita: " + imparesEsquerdaParesDireita(listaInteiros2));
 
         System.out.println("Numero em binario: " + intToBin(31));
+
+        System.out.println("Ordenando lista: " + ordenaArrayCrescente(listaInteiros1));
     }
 
     public static void adicionarPessoas(){
@@ -147,6 +149,17 @@ public class Main {
         return aux;
     }
 
-    
+    public static ArrayList<Integer> ordenaArrayCrescente (ArrayList<Integer> listaA){
+        int aux;
+        for (int i = 0; i < listaA.size(); i++){
+            for (int j = 0; j < listaA.size(); j++)
+                if (listaA.get(i) < listaA.get(j)){
+                    aux = listaA.get(i);
+                    listaA.set(i, listaA.get(j));
+                    listaA.set(j, aux);
+                }
+        }
+        return listaA;
+    }
 
 }
