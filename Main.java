@@ -57,4 +57,15 @@ public class Main {
         return listaC;
     }
 
+    public ArrayList<Integer> uniaoArrays (ArrayList<Integer> listaA, ArrayList<Integer> listaB){
+        ArrayList<Integer> listaC = new ArrayList<Integer>();
+        listaC.addAll(listaA);
+        for (int i = 0; i < listaB.size(); i++){
+            if (!listaC.contains(listaB.get(i))){
+                listaC.add(listaB.get(i));
+            }
+        }
+        return listaC;
+    }
+
 }
