@@ -37,8 +37,10 @@ public class Main {
         System.out.println("Troca Maior/Menor lista 1: " + trocaMaiorMenor(listaInteiros1));
         System.out.println("Troca Maior/Menor lista 2: " + trocaMaiorMenor(listaInteiros2));
 
-        System.out.println("imparesEsquerdaParesDireita: " + imparesEsquerdaParesDireita(listaInteiros1));
-        System.out.println("imparesEsquerdaParesDireita: " + imparesEsquerdaParesDireita(listaInteiros2));
+        System.out.println("ImparesEsquerdaParesDireita: " + imparesEsquerdaParesDireita(listaInteiros1));
+        System.out.println("ImparesEsquerdaParesDireita: " + imparesEsquerdaParesDireita(listaInteiros2));
+
+        System.out.println("Numero em binario: " + intToBin(31));
     }
 
     public static void adicionarPessoas(){
@@ -131,6 +133,18 @@ public class Main {
                 listaAux.add(listaA.get(i));
         }
         return listaAux;
+    }
+
+    public static String intToBin (int numero){
+        String aux = "";
+        while (numero > 0){
+            if (numero % 2 == 1)
+                aux = "1" + aux;
+            else
+                aux = "0" + aux;
+            numero = numero / 2;
+        }
+        return aux;
     }
 
     
