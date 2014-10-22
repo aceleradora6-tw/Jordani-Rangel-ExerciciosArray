@@ -36,6 +36,9 @@ public class Main {
 
         System.out.println("Troca Maior/Menor lista 1: " + trocaMaiorMenor(listaInteiros1));
         System.out.println("Troca Maior/Menor lista 2: " + trocaMaiorMenor(listaInteiros2));
+
+        System.out.println("imparesEsquerdaParesDireita: " + imparesEsquerdaParesDireita(listaInteiros1));
+        System.out.println("imparesEsquerdaParesDireita: " + imparesEsquerdaParesDireita(listaInteiros2));
     }
 
     public static void adicionarPessoas(){
@@ -118,5 +121,18 @@ public class Main {
         }
         return listaA;
     }
+
+    public static ArrayList<Integer> imparesEsquerdaParesDireita (ArrayList<Integer> listaA){
+        ArrayList<Integer> listaAux = new ArrayList<Integer>();
+        for (int i = 0; i < listaA.size(); i++){
+            if (listaA.get(i) % 2 != 0)
+                listaAux.add(0, listaA.get(i));
+            else
+                listaAux.add(listaA.get(i));
+        }
+        return listaAux;
+    }
+
+    
 
 }
