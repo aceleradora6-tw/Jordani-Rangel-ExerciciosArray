@@ -126,7 +126,8 @@ public class Main {
         return listaA;
     }
 
-    public static ArrayList<Integer> imparesEsquerdaParesDireita (ArrayList<Integer> listaA){
+    public static ArrayList<Integer> imparesEsquerdaParesDireita (ArrayList<Integer> listaA).
+    {
         ArrayList<Integer> listaAux = new ArrayList<Integer>();
         for (int i = 0; i < listaA.size(); i++){
             if (listaA.get(i) % 2 != 0)
